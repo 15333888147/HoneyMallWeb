@@ -35,13 +35,13 @@ const constantRoutes = [
   {
     path: '',
     component: 'layout/Layout',
-    redirect: 'dashboard',
+    redirect: 'home',
     children: [
       {
-        path: 'dashboard',
-        component: 'views/dashboard/index',
-        name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        path: 'home',
+        component: 'views/home/index',
+        name: 'Home',
+        meta: { title: 'home', icon: 'dashboard', affix: true }
       }
     ]
   },
@@ -74,20 +74,20 @@ const constantRoutes = [
 
 const asyncRoutes = [
   {
-    path: '/permission',
+    path: '/shop',
     component: 'layout/Layout',
-    redirect: '/permission/index',
+    redirect: '/shop/index',
     alwaysShow: true,
     meta: {
-      title: 'Permission',
+      title: 'Shop',
       icon: 'lock',
       roles: ['admin', 'editor']
     },
     children: [
       {
         path: 'page',
-        component: 'views/permission/page',
-        name: 'PagePermission',
+        component: 'views/shop/page',
+        name: 'Shop',
         meta: {
           title: 'Page Permission',
           roles: ['admin']
@@ -95,16 +95,16 @@ const asyncRoutes = [
       },
       {
         path: 'directive',
-        component: 'views/permission/directive',
-        name: 'DirectivePermission',
+        component: 'views/shop/directive',
+        name: 'Shop',
         meta: {
           title: 'Directive Permission'
         }
       },
       {
         path: 'role',
-        component: 'views/permission/role',
-        name: 'RolePermission',
+        component: 'views/shop/role',
+        name: 'Shop',
         meta: {
           title: 'Role Permission',
           roles: ['admin']
